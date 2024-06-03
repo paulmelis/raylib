@@ -4029,7 +4029,8 @@ void GenTextureMipmaps(Texture2D *texture)
     rlGenTextureMipmaps(texture->id, texture->width, texture->height, texture->format, &texture->mipmaps);
 }
 
-// Generate GPU mipmaps for all textures used in a model
+// Generate GPU mipmaps for all textures used in a model, as
+// well as setting necessary texture filtering
 void GenModelMipmaps(Model model)
 {
     for (int i = 0; i < model.materialCount; i++)
